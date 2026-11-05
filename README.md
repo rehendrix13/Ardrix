@@ -9,7 +9,7 @@ Ardrix is an installable web app (PWA). It works offline, saves progress on the 
 | Area | Where |
 | --- | --- |
 | Game rules (XP, levels, ranks, unlocking, side quests, calendar, disciplines) | `src/lib/game.ts` |
-| Launch templates (Get Fit, Mind and Mood, Eat Healthier, Money Basics, Learn Something New, Product Owner) | `src/content/templates.ts` |
+| Launch templates (Get Fit, Mind and Mood, Eat Healthier, Money Basics, Learn Something New) | `src/content/templates.ts` |
 | "Build my own" goal builder | `src/lib/builder.ts`, `src/screens/Builder.tsx` |
 | Screens | `src/screens/` |
 | Accounts and sync (Supabase, email code sign-in) | `src/lib/supabase.ts`, `src/lib/store.tsx` |

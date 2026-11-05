@@ -163,39 +163,6 @@ export const TEMPLATES: Template[] = [
       ]],
     ],
   },
-  {
-    id: "career-po", name: "Product Owner", icon: "💼", category: "career",
-    tagline: "Become the PO teams trust to decide what's worth building.",
-    desc: "Backlog craft, customer discovery, strategy, stakeholders and outcomes. Written by a Scrum Master who made the jump.",
-    capstone: "Own one feature end to end: discover the problem, prioritize it, ship it, and report the measured outcome.",
-    branches: [
-      ["Backlog Craft", "Closest to your Scrum Master roots. Quick wins live here.", [
-        ["E", "Story Writing", ["Rewrite 3 backlog items with a clear user, need, and \"so that\" value statement", "Learn the INVEST criteria and audit 5 stories against it", "Split one oversized story into thin vertical slices"]],
-        ["C", "Prioritization", ["Score your top 10 features with WSJF", "Try RICE or MoSCoW on one epic and compare the result", "Write a one-paragraph rationale for your #1 priority"]],
-        ["A", "Backlog Ownership", ["Run a refinement session as the PO, not the facilitator", "Prune the backlog: archive anything untouched for 6+ months", "Agree on a Definition of Ready with the team"]],
-      ]],
-      ["Customer Discovery", "Know who you build for and what they actually need.", [
-        ["E", "Know Your User", ["Name your 3 main user types and write a short persona for each", "Sit with or shadow one real user for 30 minutes", "List the top 5 pain points you've heard from users"]],
-        ["C", "Interviewing", ["Read The Mom Test by Rob Fitzpatrick", "Run 2 user interviews using only open-ended questions", "Turn your interview notes into 3 to 5 themes"]],
-        ["A", "Validation", ["Write a testable hypothesis for one upcoming feature", "Get user feedback on a mockup before anything is built", "Kill or reshape one idea based on what you learned"]],
-      ]],
-      ["Vision & Strategy", "Decide what is worth building, and why.", [
-        ["E", "Product Why", ["Write your product's purpose in one sentence", "Read Escaping the Build Trap by Melissa Perri", "Map how your team's current work ties to a business objective"]],
-        ["C", "Roadmapping", ["Draft a Now / Next / Later roadmap", "Write outcome-based objectives for your team", "Walk one peer through your roadmap and collect feedback"]],
-        ["A", "The Art of No", ["Defer or decline one request with a clear rationale", "Write a short trade-off doc for two competing priorities", "Write a product vision statement and share it with the team"]],
-      ]],
-      ["Stakeholders & Influence", "Lead without authority. Build trust before you need it.", [
-        ["E", "Stakeholder Map", ["Build a power / interest grid of your stakeholders", "Hold a 1:1 with your top 2 stakeholders: \"What does success look like?\"", "Write down your business owner's top 3 goals"]],
-        ["C", "Communication", ["Send an update that leads with outcomes, not tasks", "Run a demo as the PO, framed around value", "Explain one technical item in plain business terms"]],
-        ["A", "Negotiation", ["Facilitate a priority conflict between two stakeholders", "Lead your team's planning session as the PO", "Get a stakeholder to agree to a scope trade-off"]],
-      ]],
-      ["Metrics & Outcomes", "Prove value with evidence, not velocity.", [
-        ["E", "Measure What Matters", ["Learn the difference between outputs and outcomes", "Define one success metric for a feature in flight", "Find out where your product's usage data lives"]],
-        ["C", "Data-Informed Decisions", ["Set up a simple tracked metric or dashboard", "Check a shipped feature against its success metric", "Use data to argue for one priority"]],
-        ["A", "Value Delivery", ["Write a release retro: did it deliver the value we expected?", "Define outcome goals for your next quarter", "Report outcomes, not velocity, to leadership"]],
-      ]],
-    ],
-  },
 ];
 
 export const getTemplate = (id: string) => TEMPLATES.find((t) => t.id === id);
