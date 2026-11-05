@@ -80,7 +80,13 @@ export interface CalEvent {
   createdAt: number;
 }
 
-export interface Profile { name: string; onboarded: boolean; createdAt: number }
+export interface Profile {
+  name: string;
+  onboarded: boolean;
+  createdAt: number;
+  /** Show the optional "Use any AI" helper in the goal builder. Missing means on. */
+  aiHelper?: boolean;
+}
 
 export interface AppState {
   version: 2;

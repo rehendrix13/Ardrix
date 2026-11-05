@@ -5,13 +5,16 @@ import { navigate, useRoute } from "../lib/router";
 import { AREA_IDEAS, RANK_BY_POSITION, draftProblems, draftToTree, emptyDraft, splitLines, type Draft } from "../lib/builder";
 import { RANK_XP } from "../lib/game";
 import { Field, RankBadge } from "../components/ui";
+import { AiHelperCard, AiHelperDialog } from "../components/AiHelper";
 
 const ICONS = ["🎯", "🎸", "🏃", "🗣️", "🎨", "💻", "🧘", "📈", "🏡", "✍️", "🌱", "⚡"];
 const STEPS = ["Goal", "Areas", "Steps", "Finish"];
 
 export function Builder() {
-  const { update, toast } = useStore();
+  const { state, update, toast } = useStore();
   const route = useRoute();
+  const [aiOpen, setAiOpen] = useState(false);
+  const aiOn = state.profile.aiHelper !== false;
   const onboarding = route.query.get("onboarding") === "1";
   const [d, setD] = useState<Draft>(emptyDraft);
   const [step, setStep] = useState(0);
@@ -51,7 +54,17 @@ export function Builder() {
               <button key={ic} type="button" role="radio" aria-checked={d.icon === ic} className={d.icon === ic ? "on" : ""} onClick={() => set((x) => { x.icon = ic; })}>{ic}</button>
             ))}
           </div>
+          {aiOn && <AiHelperCard goal={d.goal} onOpen={() => setAiOpen(true)} />}
         </section>
+      )}
+
+      {aiOpen && (
+        <AiHelperDialog goal={d.goal} why={d.why} onClose={() => setAiOpen(false)} onDraft={(p) => {
+          set((x) => { x.branches = p.branches; if (p.capstone) x.capstone = p.capstone; });
+          setAiOpen(false);
+          setStep(2);
+          toast("Draft loaded. Review and edit anything before you create it.");
+        }} />
       )}
 
       {step === 1 && (

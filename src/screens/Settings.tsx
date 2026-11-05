@@ -63,6 +63,17 @@ export function Settings() {
       </section>
 
       <section className="card">
+        <div className="card-head">
+          <h2>AI helper</h2>
+          <label className="switch">
+            <input type="checkbox" checked={state.profile.aiHelper !== false} onChange={(e) => { const on = e.target.checked; update((s) => { s.profile.aiHelper = on; }); }} />
+            <span>{state.profile.aiHelper !== false ? "Shown" : "Hidden"}</span>
+          </label>
+        </div>
+        <p className="muted small">An optional "Use any AI" button in the goal builder: copy a prompt into any chatbot, then paste its answer back. Ardrix never sends your data to an AI. Turn it off to hide the button.</p>
+      </section>
+
+      <section className="card">
         <h2>Your progress &amp; data</h2>
         <div className="row wrap">
           <button type="button" className="btn ghost" onClick={() => shareSummary()}>Share my progress</button>

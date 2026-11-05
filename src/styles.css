@@ -325,3 +325,13 @@ span.chip { cursor: default; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* "Use any AI" helper */
+.ai-card { display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px dashed var(--line-2); border-radius: 12px; padding: 12px 14px; }
+.ai-card p { margin-top: 2px; }
+.ai-card .btn { flex: none; }
+.ai-steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 14px; }
+.ai-steps li { display: flex; flex-direction: column; gap: 8px; }
+.ai-steps li::marker { color: var(--ember-2); font-weight: 700; }
+.ai-steps .btn { align-self: flex-start; }
+.prompt-box { font-size: 13px !important; color: var(--muted); font-family: ui-monospace, Menlo, monospace; }
